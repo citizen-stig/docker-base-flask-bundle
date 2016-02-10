@@ -3,8 +3,9 @@ FROM ubuntu:14.04
 
 MAINTAINER Nikolay Golub <nikolay.v.golub@gmail.com>
 
+
 RUN apt-get update && \
-    apt-get install -y libpq-dev supervisor rabbitmq-server redis-server libxml2-dev libxslt1-dev libssl-dev libffi-dev python-dev python-pip && \
+    apt-get install -y libpq-dev supervisor rabbitmq-server redis-server libxml2-dev libxslt1-dev libssl-dev libffi-dev python3-dev python3-pip && \
     apt-get clean && \
-    rm -rf /var/lib/apt/lists/* && \
-    pip install psycopg2==2.6.1 gevent==1.1b6 lxml==3.4.4
+    rm -rf /var/lib/apt/lists/*  && \
+    pip install psycopg2==2.6.1 gevent==1.1rc3 lxml==3.5.0
